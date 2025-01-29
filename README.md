@@ -3,10 +3,10 @@
 
 ### Lang to be used in this repo
 
-#### CPP
-#### C
-#### Rust
-#### Maybe Go
+#### 1. CPP
+#### 2. C
+#### 3. Rust
+#### 4. Maybe Go
 
 
 #### How this will work
