@@ -9,3 +9,11 @@ contains_duplicate:
 Valild_Anagram:
 	@g++ -g -o neetcode_Q3/Valid_Anagram neetcode_Q3/Valid_Anagram.cpp
 	@./neetcode_Q3/Valid_Anagram
+
+Two_sum:
+	@g++ -g -o neetcode_Q4/Two_sum neetcode_Q4/Two_sum.cpp
+	@./neetcode_Q4/Two_sum
+
+groupAnagram:
+	@g++ -g -o neetcode_Q5/groupAnagram neetcode_Q5/groupAnagram.cpp
+	@./neetcode_Q5/groupAnagram
