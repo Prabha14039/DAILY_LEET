@@ -25,3 +25,7 @@ topKfrequent:
 encode:
 	@g++ -g -o neetcode_Q7/encode_decode neetcode_Q7/encode_decode.cpp
 	@./neetcode_Q7/encode_decode
+
+productExceptSelf:
+	@g++ -g -o neetcode_Q8/productExceptSelf neetcode_Q8/productExceptSelf.cpp
+	@./neetcode_Q8/productExceptSelf
