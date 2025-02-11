@@ -29,3 +29,7 @@ encode:
 productExceptSelf:
 	@g++ -g -o neetcode_Q8/productExceptSelf neetcode_Q8/productExceptSelf.cpp
 	@./neetcode_Q8/productExceptSelf
+
+isValidSudoko:
+	@g++ -g -o neetcode_Q9/productExceptSelf neetcode_Q9/isValidSudoko.cpp
+	@./neetcode_Q9/isValidSudoko
