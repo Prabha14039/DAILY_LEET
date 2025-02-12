@@ -33,3 +33,8 @@ productExceptSelf:
 isValidSudoko:
 	@g++ -g -o neetcode_Q9/productExceptSelf neetcode_Q9/isValidSudoko.cpp
 	@./neetcode_Q9/isValidSudoko
+
+longestConsecutive:
+	@g++ -g -o neetcode_Q10/longestConsecutive neetcode_Q10/longestConsecutive.cpp
+	@./neetcode_Q10/longestConsecutive
+

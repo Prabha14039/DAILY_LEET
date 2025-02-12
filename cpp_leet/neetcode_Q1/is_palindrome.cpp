@@ -1,36 +1,35 @@
+#include <algorithm>
 #include<bits/stdc++.h>
-
+using namespace std;
 class Solution {
-    int reverse(int x)
-    {
-        int rev_num = 0;
-        while(x>0)
-        {
-            rev_num = rev_num *10 + x % 10;
-            x /= 10;
-        }
-        return rev_num;
-    }
     public:
-        bool isPalindrome(int x) {
-            if(x<0)
+    bool isPalindrome(string s) {
+        auto end_pos = remove(s.begin(),s.end(),' ');
+        s.erase(end_pos,s.end());
+        for(char &ch : s)
+        {
+            ch = tolower(ch);
+            s.erase(
+                    remove_if(s.begin(), s.end(), [](char c) { return !isalnum(c); }),
+                    s.end() );
+
+                }
+        string s_revers = s;
+        reverse(s_revers.begin(),s_revers.end());
+        for(int i {0}; i<s.size();i++)
+        {
+            if(s[i]!=s_revers[i])
             {
                 return false;
             }
-            int rev_num = reverse(x);
-            if(rev_num != x)
-            {
-                return false;
-            }
-            return true;
         }
+        return true;
+    }
 };
 
 int main()
 {
     Solution Sol;
-    int x;
-    std::cin>>x;
-    bool ans = Sol.isPalindrome(x);
+    bool ans = Sol.isPalindrome("Was it a car or a cat I saw?");
     std::cout<<ans;
 }
