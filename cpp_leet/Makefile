@@ -38,3 +38,10 @@ longestConsecutive:
 	@g++ -g -o neetcode_Q10/longestConsecutive neetcode_Q10/longestConsecutive.cpp
 	@./neetcode_Q10/longestConsecutive
 
+Twosum:
+	@g++ -g -o neetcode_Q11/Twosum neetcode_Q11/Twosum.cpp
+	@./neetcode_Q11/Twosum
+
+threeSum:
+	@g++ -g -o neetcode_Q12/threeSum neetcode_Q12/threeSum.cpp
+	@./neetcode_Q12/threeSum
