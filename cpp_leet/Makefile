@@ -45,3 +45,8 @@ Twosum:
 threeSum:
 	@g++ -g -o neetcode_Q12/threeSum neetcode_Q12/threeSum.cpp
 	@./neetcode_Q12/threeSum
+
+maxArea:
+	@g++ -g -o neetcode_Q13/maxArea neetcode_Q13/maxArea.cpp
+	@./neetcode_Q13/maxArea
+

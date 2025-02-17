@@ -2,47 +2,65 @@
 using namespace std;
 class Solution {
     public:
-    vector<vector<int>> threeSum(vector<int>& nums) {
+    vector<vector<int>> threeSum(vector<int>& nums) { //O(n3)
+        set<vector<int>> result;
         sort(nums.begin(),nums.end());
-        vector<vector<int>> result;
-        int i =0 ,j=i+1,k=nums.size()-1;
-        while(i<nums.size())
+        for (int i {0};i<nums.size();i++)
         {
-            if(nums[j]+nums[k] == -nums[i] && i!=j && j!=k && i!=k)
+            for(int j {i+1}; j<nums.size();j++)
             {
-                result.push_back({nums[i],nums[j],nums[k]});
-                i++;
+                for (int k {j+1} ; k<nums.size();k++)
+                {
+                    if (i!=j && j!=k && k!=i && nums[i]+nums[j]+nums[k] ==0)
+                    {
+                        result.insert({nums[i],nums[j],nums[k]});
+                    }
+                }
             }
-            if(nums[j]+nums[k]>-nums[i] && k>j)
-            {
-                k--;
-                continue;
-            }
-            else if(nums[j]+nums[k]<-nums[i] && j<k)
-            {
-                j++;
-                continue;
-            }
-
-            i++;
-            j = i+1;
-            k = nums.size()-1;
         }
-        return result;
+        return vector<vector<int>>(result.begin(),result.end());
+    }
+
+    vector<vector<int>> twop_threeSum(vector<int>& nums) { //O(n3)
+        set<vector<int>> result;
+        sort(nums.begin(),nums.end());
+        for (int i {0};i<nums.size();i++)
+        {
+            int j {i+1},k=nums.size()-1;
+            while(j<k)
+            {
+                if(nums[i]+nums[j]+nums[k] == 0)
+                {
+                    result.insert({nums[i],nums[j],nums[k]});
+                    j++;
+                }
+                if(nums[i]+nums[j]+nums[k]>0)
+                {
+                    k--;
+                }
+                else
+                {
+                    j++;
+                }
+            }
+        }
+        return vector<vector<int>>(result.begin(),result.end());
     }
 };
 
 
 int main()
 {
-    vector<int> numbers = {-1,0,-1,2,-4};
+    vector<int> numbers = {-1,0,1,2,-1,-4};
     Solution sol;
-    vector<vector<int>> result = sol.threeSum(numbers);
+    vector<vector<int>> result = sol.twop_threeSum(numbers);
     for(auto i:result)
     {
+        cout<<"{";
         for(int value : i)
         {
-            cout<<value<<endl;
+            cout<<value<<',';
         }
+        cout<<"}"<<endl;
     }
 }
