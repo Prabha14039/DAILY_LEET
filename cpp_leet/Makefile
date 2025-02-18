@@ -50,3 +50,6 @@ maxArea:
 	@g++ -g -o neetcode_Q13/maxArea neetcode_Q13/maxArea.cpp
 	@./neetcode_Q13/maxArea
 
+trap:
+	@g++ -g -o neetcode_Q14/trap neetcode_Q14/trap.cpp
+	@./neetcode_Q14/trap
