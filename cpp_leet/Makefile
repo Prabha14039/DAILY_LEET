@@ -57,3 +57,11 @@ trap:
 isValid:
 	@g++ -g -o neetcode_Q15/isValid neetcode_Q15/isValid.cpp
 	@./neetcode_Q15/isValid
+
+evalRPN:
+	@g++ -g -o neetcode_Q16/evalRPN neetcode_Q16/evalRPN.cpp
+	@./neetcode_Q16/evalRPN
+
+generateP:
+	@g++ -g -o neetcode_Q17/generateP neetcode_Q17/generateP.cpp
+	@./neetcode_Q17/generateP
